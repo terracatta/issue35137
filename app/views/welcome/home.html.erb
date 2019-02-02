@@ -1,0 +1,18 @@
+<h1>rails/rails Issue # 35137</h1>
+<p>Check the rails console for errors. Below this text there should be a sparkline chart. The tooltips on hover will not be styled if the CSP is blocking the inline styles from loading.</p>
+
+<%= content_tag :span, "",
+     data: { controller: "sparklines",
+        sparklines_data: [0,0,8,0,3,2,4],
+        sparklines_options: {
+           type: "bar",
+           barWidth: 14,
+           barSpacing: 12,
+           zeroAxis: false,
+           barColor: "#dbdde8",
+           disableHighlight: true,
+           tooltipFormat: "{{prefix}}{{value}}"
+        }
+      }
+    %>
+  </td>
